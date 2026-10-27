@@ -1,0 +1,40 @@
+
+/* v4.1 Factory illustrated floor */
+.map-world.v41{background:radial-gradient(ellipse at 30% 10%,#274966,#10243a 70%);padding:18px}
+.factory-flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:7px;margin:18px 0 8px;font-weight:700;font-size:10px;color:#c0d9e7}
+.factory-flow span{background:#1e3852;border:1px solid #375777;border-radius:7px;padding:8px}
+.factory-flow i{color:#52d9b9;font-size:17px;font-style:normal}
+.factory-scene-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:17px 0;padding:17px;background:repeating-linear-gradient(0deg,transparent 0 44px,#ffffff06 45px),repeating-linear-gradient(90deg,transparent 0 44px,#ffffff06 45px);border:1px solid #2c4761;border-radius:15px}
+.factory-tile{display:flex;flex-direction:column;min-width:0;overflow:hidden;position:relative;align-items:stretch;text-align:left;background:#162c43;border:1px solid #375a74;border-radius:13px;padding:9px;color:#e6f4fc;box-shadow:0 8px 0 #0a1b2c;transition:transform .14s,box-shadow .14s,border-color .14s}
+.factory-tile:hover,.factory-tile:focus-visible{transform:translateY(-4px);border-color:#8ad8e6}
+.factory-tile.selected{border:2px solid #6becbc;box-shadow:0 0 0 3px #54daab25,0 7px 0 #0a1b2c}
+.factory-tile.alert .scene-beacon{background:#fb6c65}
+.scene-sky{display:flex;justify-content:space-between;align-items:center;padding:0 3px 5px;font-size:10px;font-weight:800;color:#a5d4f5}
+.scene-beacon{width:8px;height:8px;border-radius:100%;background:#54daaa;box-shadow:0 0 9px currentColor}
+.scene-beacon.amber{background:#e5c34e}.scene-beacon.red{background:#f56f6c}
+.scene-shell{height:114px;position:relative;overflow:hidden;border-radius:8px;background:linear-gradient(145deg,#3f6b86 0%,#254d6b 46%,#14344f 47%,#203e59 100%);border:1px solid #679ab5}
+.scene-back{height:33px;background:linear-gradient(#668da6,#345e79);border-bottom:4px solid #172d46;display:flex;justify-content:space-evenly;align-items:center;transform:skewX(-11deg);margin:4px 9px 0}
+.scene-window{width:18px;height:15px;background:#8fd1e3;border:3px solid #234c69;border-radius:2px}
+.scene-equipment{position:absolute;left:9px;right:9px;top:44px;display:flex;align-items:center;justify-content:space-around}
+.scene-machine{display:grid;place-items:center;width:40px;height:34px;border:2px solid #a3d1df;background:#284760;box-shadow:4px 5px 0 #0c283e;font-size:21px;color:#a8e6e6}
+.scene-machine.second{height:25px;width:30px}
+.scene-conveyor{letter-spacing:1px;color:#92dce0;background:#142e40;padding:4px 1px;border-top:3px solid #88bbd0;transform:skew(-12deg);font-size:12px}
+.scene-floor{position:absolute;bottom:5px;left:9px;right:9px;display:flex;justify-content:space-between;align-items:center;color:#e4f6fa;font-size:15px}
+.scene-worker{font-size:18px}
+.factory-label{padding:10px 3px 4px;display:flex;flex-direction:column;gap:5px;min-height:55px}
+.factory-label b{font-size:12px;line-height:1.4;overflow-wrap:anywhere}
+.factory-label small{font-size:10px;color:#91b8d2;line-height:1.4}
+.map-status{font-size:10px;font-weight:800;color:#6be1ac}
+.map-status.alert{color:#ff9687}.map-status.watch{color:#e9c86e}
+.map-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.map-mini-grid>div{background:#1c344c;border:1px solid #34506a;border-radius:10px;padding:12px}
+.map-mini-grid small{color:#77cbd7;font-weight:800;font-size:10px}
+.map-mini-grid p{margin:7px 0 0!important}
+.map-info-list{display:flex;flex-direction:column;gap:9px}
+.map-info-row{background:#1b3148;border:1px solid #2c4961;border-radius:9px;display:flex;align-items:center;gap:8px;padding:10px;font-size:12px;line-height:1.5}
+.map-info-dot{height:7px;width:7px;flex-shrink:0;border-radius:50%;background:#5ddbbb}
+.map-fineprint{font-size:11px!important}
+.map-details .map-detail-content{min-height:150px}
+.map-details .map-tabbar button{font-size:11px}
+@media(max-width:1100px){.factory-scene-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:580px){.factory-scene-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:9px}.scene-shell{height:94px}.scene-back{height:28px}.scene-equipment{top:39px}.factory-tile{padding:6px}.factory-label b{font-size:11px}.factory-label small{font-size:9px}.map-mini-grid{grid-template-columns:1fr}.map-world.v41{padding:10px}.factory-flow{gap:4px;font-size:9px}.factory-flow span{padding:6px}.map-intro h2{font-size:20px}}
