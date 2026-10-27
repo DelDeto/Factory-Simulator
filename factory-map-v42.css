@@ -1,0 +1,33 @@
+/* v4.2 richer machine illustrations + product journey */
+.v42-world .factory-scene-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.factory-tile.v42{background:#12293f}.art-stage{height:138px;position:relative;overflow:hidden;border-radius:9px;background:linear-gradient(135deg,#456e8c 0%,#274b6b 54%,#172e48 55%,#203d59 100%);border:1px solid #527e9d}
+.art-stage.art-office{background:linear-gradient(145deg,#365c8a,#193757)}
+.art-stage.art-warehouse{background:linear-gradient(145deg,#746044,#213a52)}
+.art-stage.art-iqc{background:linear-gradient(145deg,#527a8e,#17364a)}
+.art-stage.art-smt{background:linear-gradient(145deg,#426e80,#17364e)}
+.art-stage.art-aoi{background:linear-gradient(145deg,#53627f,#122f51)}
+.art-stage.art-pcbtest{background:linear-gradient(145deg,#475c8e,#152b4d)}
+.art-stage.art-assembly,.art-stage.art-final{background:linear-gradient(145deg,#487d70,#173d50)}
+.art-stage.art-software{background:linear-gradient(145deg,#494d82,#1a2b51)}
+.art-stage.art-function{background:linear-gradient(145deg,#47798b,#163b52)}
+.art-stage.art-reliability{background:linear-gradient(145deg,#836447,#263746)}
+.art-stage.art-shipping{background:linear-gradient(145deg,#687d6c,#1b4352)}
+.art-top{display:flex;justify-content:space-between;position:absolute;top:5px;left:7px;right:7px;font-size:10px;color:#e8f9ff;z-index:2}
+.art-led{height:8px;width:8px;border-radius:50%;background:#57deb2;box-shadow:0 0 10px #56efc4}.art-led.alert{background:#f77770;box-shadow:0 0 10px #f77770}.art-led.watch{background:#ffd15f}
+.art-backdrop{position:absolute;left:8px;right:8px;top:20px;height:30px;background:#142e45a8;transform:skew(-9deg);border-bottom:3px solid #83b2c9;display:flex;align-items:center;justify-content:center}
+.art-wall{width:75%;height:7px;border-top:2px solid #8bbbd0;border-bottom:2px solid #47748e}.art-pipe{position:absolute;right:8px;width:4px;height:20px;background:#b5dbe8}
+.art-machines{position:absolute;left:5px;right:5px;top:45px;height:52px;display:flex;align-items:center;justify-content:space-evenly;gap:5px}
+.art-machine{display:grid;place-items:center;background:linear-gradient(135deg,#669eb5,#28506e);border:2px solid #b3dce9;box-shadow:4px 6px #12273b;font-size:21px;width:30%;height:43px;transform:skew(-4deg);border-radius:4px}.art-machine.machine-1{height:37px}.art-machine.machine-2{height:32px}
+.art-belt{position:absolute;bottom:23px;left:7px;right:7px;height:17px;background:#0b283e;border-top:4px solid #9ccbd2;overflow:hidden;display:flex;align-items:center}
+.art-belt-track{white-space:nowrap;color:#64adba;font-size:12px;letter-spacing:5px;animation:conveyorMove 2s linear infinite}
+.art-product{position:absolute;left:30%;font-size:13px;filter:drop-shadow(0 0 2px #fff);animation:productTravel 5s ease-in-out infinite}
+.art-floor-label{position:absolute;bottom:3px;left:4px;right:4px;color:#c9edf5;font-size:8px;font-weight:800;text-align:center;letter-spacing:.3px}
+.moving-flow i{animation:flowPulse 1.5s ease-in-out infinite}.factory-tile.v42 .factory-label{min-height:55px}
+.journey{margin:15px 0;padding:14px;background:linear-gradient(125deg,#1d425b,#173247);border:1px solid #57bbbe;border-radius:13px}
+.journey-title,.journey-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.journey-title b{color:#a6f2ea;font-size:12px}
+.journey-progress{height:7px;border-radius:9px;background:#38566a;margin:12px 0;overflow:hidden}.journey-progress div{height:100%;background:#58e0b6;transition:width .3s}
+.journey-body{display:flex;gap:12px;align-items:center;font-size:12px;line-height:1.6}.journey-body p{color:#b7d5e4;margin:6px 0}.journey-asset{font-size:45px;min-width:58px;text-align:center;animation:liftItem 2s infinite}
+.journey-controls{margin-top:15px}.journey-controls .btn{font-size:11px;padding:9px 12px}
+@keyframes conveyorMove{from{transform:translateX(-20px)}to{transform:translateX(20px)}}@keyframes productTravel{0%{left:10%}50%{left:78%}100%{left:10%}}@keyframes flowPulse{50%{opacity:.3}}@keyframes liftItem{50%{transform:translateY(-5px)}}
+@media(prefers-reduced-motion:reduce){.art-belt-track,.art-product,.moving-flow i,.journey-asset{animation:none}}
+@media(max-width:600px){.v42-world .factory-scene-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.art-stage{height:112px}.art-machines{top:41px;height:42px}.art-machine{font-size:17px;height:35px}.art-machine.machine-1{height:31px}.art-machine.machine-2{height:27px}.art-belt{bottom:20px}.journey-body{align-items:flex-start}.journey-asset{font-size:35px}}
