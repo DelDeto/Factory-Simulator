@@ -1,0 +1,17 @@
+
+/* v5 – connected interactive isometric floor */
+.isometric-layout{grid-template-columns:minmax(0,1.75fr) minmax(320px,0.85fr)}
+.iso-map-card{background:linear-gradient(145deg,#1c3753,#0d2038);border:1px solid #416482;border-radius:19px;overflow:hidden;min-width:0}
+.iso-map-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px;font-size:11px;color:#a0ebec;flex-wrap:wrap}
+.iso-controls{display:flex;gap:8px}.iso-controls .btn{padding:9px 12px;font-size:11px}
+.iso-map-frame{position:relative;width:100%;background:#17344b;overflow:hidden}
+.iso-map-frame img{display:block;width:100%;height:auto;user-select:none}
+.iso-hotspot{position:absolute;transform:translate(-50%,-50%);width:8%;height:12%;background:#1e7ca01c;border:2px solid transparent;border-radius:35%;display:grid;place-items:center;cursor:pointer;transition:background .2s,border-color .2s,box-shadow .2s}
+.iso-hotspot span{font-size:12px;font-weight:800;color:#fff;text-shadow:0 2px 5px #000;background:#0d3556c9;border:1px solid #6ac9de;padding:4px 6px;border-radius:10px}
+.iso-hotspot:hover,.iso-hotspot:focus-visible{background:#3febd142;border-color:#6ee5d0;outline:none}
+.iso-hotspot.active,.iso-hotspot.following{background:#32eecb40;border-color:#61edce;box-shadow:0 0 0 6px #65efcc12,0 0 28px #5fefd49a}
+.iso-bottom{padding:12px 15px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:11px;color:#b6d2e4}
+.iso-map-card .journey{margin:12px}
+.isometric-layout .map-details{min-width:0}
+@media(max-width:1170px){.isometric-layout{grid-template-columns:1fr}.isometric-layout .map-details{position:static}}
+@media(max-width:650px){.iso-map-toolbar{align-items:flex-start}.iso-controls{width:100%;flex-wrap:wrap}.iso-hotspot span{font-size:8px;padding:2px 3px}.iso-hotspot{width:10%;height:12%}.iso-bottom{font-size:10px}}
